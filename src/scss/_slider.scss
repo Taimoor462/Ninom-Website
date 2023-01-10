@@ -1,0 +1,124 @@
+#slider {
+    overflow: hidden;
+    position: relative;
+    
+    section {
+        position: relative;
+        display: flex;
+        width: 500%;
+        animation: slider 25s infinite;
+
+        img{
+            width: 20%;
+            object-fit: cover;
+        }
+
+        @keyframes slider {
+            0%{
+                left: 0;
+            }
+            20%{
+                left: 0;
+            }
+            25%{
+                left:-100%;
+            }
+            45%{
+                left: -100%;
+            }
+        
+            50%{
+                left: -200%;
+            }
+            70%{
+                left: -200%;
+            }
+            75%{
+                left: -300%;
+            }
+            95%{
+                left: -300%;
+            }
+            100%{
+                left: -400%;
+            }
+        }
+    }
+
+    .logo{
+        width: 100%;
+        position: absolute;
+        top:0;
+        text-align: center;
+        
+        h1{
+            margin: 3px 15px 0 0;
+            color: $white;
+            font-size: 34px;
+            cursor: pointer;
+            font-family:'poppins-bold';
+        }
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        position: absolute;
+        top: 50%;
+        transform: translate(0 , -50%);
+
+
+        .left{
+            width: 90px;
+            height: 90px;
+            background: $bg-black;
+            border-radius: 0 100% 100% 0;
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            margin-left: -50px;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.9;
+            }
+
+            .icon{
+                height: 22px;
+                margin-left: 2px;
+            }
+        }
+
+        .right{
+            width: 90px;
+            height: 90px;   
+            background: $bg-black;
+            border-radius:100% 0 0 100%;
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            margin-right: -45px;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.9;
+            }
+
+            .icon{
+                height: 22px;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    #slider{
+        .buttons{
+            display: none;
+        }
+    }
+}

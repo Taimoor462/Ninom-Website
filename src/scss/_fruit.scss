@@ -1,0 +1,134 @@
+#fruit{
+    width: 100%;
+    padding: 90px 0;
+    
+    .title{
+        display: flex;
+        width: 100%;
+        max-width: 1140px;
+        margin-inline:auto;
+        margin-bottom: 35px;
+        
+        hr{
+            height: 1px;
+            width: 20%;
+            margin-right: 10px;
+            margin-block: auto;
+            background: $bg-hr;
+            border: none;
+        }
+        h2{
+            font-size: 32px;
+            font-weight: 500;
+            font-family:'poppins-medium';
+        }
+    }
+    
+    .fruit{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        flex-wrap: wrap;
+
+        .card{
+            width:30.655%;
+            max-height: 355px;
+            background: white;
+            margin: 1%;
+            position: relative;
+            overflow: hidden;
+
+            &:hover .overlay{
+                top: 0;
+                transition:all 0.5s ease; 
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .overlay{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background:  $text-black;
+                opacity: 0.9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h2{
+                    font-size: 20px;
+                    color: $white;
+                    font-weight: 500;
+                    margin-bottom: 25px;
+                    font-family:'poppins-medium';
+                }
+
+                a{
+                    text-decoration: none;
+                    background:transparent;
+                    padding: 8px 40px;
+                    color: $white;
+                    display: inline-block;
+                    border: 1px solid $white;
+                    font-family:'poppins-regular';
+
+                    &:hover{
+                        background: $white;
+                        color: $text-black;
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media (max-width:1150px) {
+    #fruit{
+        .title{
+            max-width: 930px;
+
+        }
+    }
+}
+@media (max-width:990px) {
+    #fruit{
+        .title{
+            max-width: 690px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    #fruit{
+        .title{
+            max-width: 510px;
+        }
+        .fruit{
+            .card{
+                width: 46%;
+            }
+        }
+    }
+}
+@media (max-width:580px) {
+    #fruit{
+        .title{
+            justify-content: center;
+
+        }
+        .fruit{
+            .card{
+                width: 92%;
+                margin-bottom: 4%;
+            }
+        }
+    }
+}

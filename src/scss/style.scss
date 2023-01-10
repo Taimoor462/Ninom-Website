@@ -1,0 +1,53 @@
+@import './variables';
+@import './slider';
+@import './main';
+@import './about';
+@import './fruit';
+@import './testimonial';
+@import './contact';
+@import './info';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+@font-face {
+    font-family:'poppins-bold';
+    src: url('../fonts/poppins-bold.ttf');
+}
+@font-face {
+    font-family:'poppins-light';
+    src: url('../fonts/poppins-light.ttf');
+}
+@font-face {
+    font-family:'poppins-medium';
+    src: url('../fonts/poppins-medium.ttf');
+}
+@font-face {
+    font-family:'poppins-regular';
+    src:url('../fonts/poppins-regular.ttf');
+}
+@font-face {
+    font-family:'poppins-semibold';
+    src:url('../fonts/poppins-semibold.ttf');
+}
+
+.primary-btn{
+    text-decoration: none;
+    background:$light-bkack;
+    padding: 8px 40px;
+    color: $white;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid $light-bkack;
+    font-family:'poppins-regular';
+
+    &:hover{
+        background: $white;
+        color: $bg-black;
+    }
+}
+
+
