@@ -7,11 +7,16 @@
 @import './contact';
 @import './info';
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 } 
+
+body{
+    position: relative;
+}
 
 @font-face {
     font-family:'poppins-bold';
@@ -50,4 +55,12 @@
     }
 }
 
-
+.scrollTracker{
+    height: 5px;
+    width: 100%;
+    background-color: $orange;
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 99999999;
+    transform-origin: left;
+}
